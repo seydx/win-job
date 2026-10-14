@@ -1,6 +1,6 @@
 {
   "name": "@seydx/win-job",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Windows job objects for Node.js: keep a process tree together and kill it with its parent",
   "author": "seydx (https://github.com/seydx/win-job)",
   "main": "index.js",
