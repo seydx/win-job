@@ -55,6 +55,7 @@ jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
+    environment: release
     permissions:
       id-token: write
       contents: read
@@ -91,6 +92,9 @@ jobs:
         shell: bash
       - name: Publish
         run: |
+          # Upgrade npm for OIDC trusted publishing (requires npm >= 11.5.1)
+          npm install -g npm@11.18.0
+
           # Update versions across platform packages (skip auto-publishing them)
           npx napi prepublish --no-gh-release --skip-optional-publish
 
@@ -108,5 +112,3 @@ jobs:
 
           # Publish main package (prepublish already ran above)
           npm publish --provenance --access public --ignore-scripts
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

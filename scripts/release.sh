@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Bump the package version, commit it, tag it and push. The Release workflow
 # then builds the Windows binaries and publishes the main package plus
-# its platform packages to npm with the NPM_TOKEN secret (with provenance).
+# its platform packages to npm via OIDC trusted publishing (with provenance).
 #
 #   tag vX.Y.Z -> bumps package.json, triggers the Release workflow (npm)
 #
