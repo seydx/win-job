@@ -1,0 +1,23 @@
+{
+  "name": "@seydx/win-job-win32-x64-msvc",
+  "version": "0.0.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "win-job.win32-x64-msvc.node",
+  "files": [
+    "win-job.win32-x64-msvc.node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seydx/win-job.git",
+    "directory": "npm/win32-x64-msvc"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 20"
+  }
+}
